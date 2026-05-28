@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "latestVersion": "0.2.11",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.11-x64.exe",
+  "sha256": "ffc3f7af3d0ef982d52445d2912f3de7e9e878ea29c08fd55df236420bc5deea",
+  "minimumWindowsVersion": "10",
+  "changelog": "Initial Flash self-update manifest."
+}
