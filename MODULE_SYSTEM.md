@@ -40,6 +40,8 @@ Flash downloads the zip, verifies SHA256, extracts it, and loads `entry.html` fr
 
 - `ekflow-0.1.46.zip`: initial metadata package.
 - `ekflow-0.1.47.zip`: module-host split test package with `entry.html`.
+- `ekflow-0.1.48.zip`: runtime snapshot package copied from the current app and patched to boot directly into ekFlow mode.
+- `ekflow-0.1.49.zip`: snapshot layout fix so installed ekFlow renders as an embedded module instead of a nested Flash shell.
 
 ## Release Process For A Module
 
@@ -52,4 +54,3 @@ Flash downloads the zip, verifies SHA256, extracts it, and loads `entry.html` fr
 7. Push to GitHub.
 
 Later, replace `downloads/` in git with GitHub Releases or CDN URLs.
-

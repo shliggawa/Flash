@@ -1,0 +1,13 @@
+{
+  "id": "ekflow",
+  "name": "ekFlow",
+  "version": "0.1.49",
+  "type": "resolve-module",
+  "entry": "entry.html",
+  "entryPage": "module",
+  "description": "Spline presets and graph editing for Fusion.",
+  "assets": {
+    "banner": "assets/ekflow-banner.png"
+  },
+  "notes": "Snapshot package containing the current ekFlow-capable renderer, forced into ekFlow-only module mode without relying on inline scripts."
+}
