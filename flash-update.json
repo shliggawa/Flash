@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.18",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.18-x64.exe",
-  "sha256": "986ae39d6b68f2913d41d6d7f66aed93718248a1fdf6339eee50d94e14bd78a8",
+  "latestVersion": "0.2.19",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.19-x64.exe",
+  "sha256": "026a31fe4b60ab6b622000faff5b45f1d0dc1f8f671b9bf9cce5aab8962f2a17",
   "minimumWindowsVersion": "10",
-  "changelog": "Keeps the selection apply target/range fix and adds debug payload logging for Apply Graph/Modifier to Selection diagnostics."
+  "changelog": "Adds explicit exit/cancel controls for Apply Graph/Modifier to Selection modes and exits those modes after every apply attempt, even when Resolve rejects the write."
 }
