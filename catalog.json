@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-29T03:05:00+08:00",
+  "updatedAt": "2026-05-29T03:25:00+08:00",
   "modules": {
     "ekflow": {
       "id": "ekflow",
@@ -10,15 +10,15 @@
       "type": "native-module",
       "runtime": "bundled",
       "installMode": "unlock",
-      "latestVersion": "0.1.50",
+      "latestVersion": "0.1.51",
       "downloadUrl": "",
       "sha256": "",
-      "minFlashVersion": "0.2.15",
-      "entryPage": "ekflow",
+      "minFlashVersion": "0.2.16",
+      "entryPage": "ekflow-native",
       "entry": "",
       "bannerClass": "spline-banner",
       "icon": "ekflow",
-      "changelog": "ekFlow now opens through the bundled native Flash runtime. Store install enables/unlocks it instead of loading the broken iframe snapshot."
+      "changelog": "ekFlow opens the restored stable 0.1.46 native page from before the Flash conversion, while Flash keeps Store/install/license state."
     }
   }
 }

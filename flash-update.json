@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.15",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.15-x64.exe",
-  "sha256": "9eaee5f905bc00fe3f5b38cce854cec48c508771d27b26021c92ca539a895265",
+  "latestVersion": "0.2.16",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.16-x64.exe",
+  "sha256": "239d272a6492539cf1c5c7c603048705f4fdf4a4cb1d77f95ecbe454259ae0b8",
   "minimumWindowsVersion": "10",
-  "changelog": "Restores ekFlow as a bundled native Flash module while keeping Store install/unlock state for the module workflow."
+  "changelog": "Launches ekFlow through the restored stable pre-Flash native runtime while keeping Flash Home, Store, and module unlock flow."
 }

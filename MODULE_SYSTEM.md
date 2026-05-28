@@ -53,6 +53,7 @@ Do not package ekFlow as an iframe snapshot again unless a proper module bridge/
 - `ekflow-0.1.48.zip`: runtime snapshot package copied from the current app and patched to boot directly into ekFlow mode.
 - `ekflow-0.1.49.zip`: snapshot layout fix so installed ekFlow renders as an embedded module instead of a nested Flash shell.
 - `ekflow-0.1.50`: no runnable zip. ekFlow is a bundled native module; catalog install/unlock state points Flash back to the built-in runtime.
+- `ekflow-0.1.51`: no runnable zip. Flash 0.2.16 routes ekFlow to the restored pre-Flash 0.1.46 native page (`ekflow-native.html`) to avoid regressions from the Flash shell renderer.
 
 ## Release Process For A Module
 
