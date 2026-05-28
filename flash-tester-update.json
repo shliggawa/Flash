@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
     "latestVersion":  "0.2.31",
-    "downloadUrl":  "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.31-x64.exe",
-    "sha256":  "29aca869b2e94924263f879ceb9e9dde43af81436dc8910e2f3b6179ab6b1a8a",
+    "downloadUrl":  "",
+    "sha256":  "",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Hardens tester licensing and fixes tester installer location. Installer now targets Flash Tester, uses NSIS update/uninstall flow, gates Resolve-facing ekFlow actions and wheel entry points, and rechecks online tester keys every 30 seconds."
+    "changelog":  "Public tester downloads are disabled. Use a direct tester installer from the owner."
 }

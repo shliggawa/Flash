@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "latestVersion": "0.2.21",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashSetup-0.2.21-x64.exe",
-  "sha256": "3692991a7dc4507f6630802500b99a73f40c7342bfbf0114f73751b4ec00ef14",
-  "minimumWindowsVersion": "10",
-  "changelog": "Adds tester license infrastructure, signed online validation hooks, installer packaging, and app-side protection gates. License enforcement is ready to enable once the license server URL is deployed."
+    "schemaVersion":  1,
+    "latestVersion":  "0.2.21",
+    "downloadUrl":  "",
+    "sha256":  "",
+    "minimumWindowsVersion":  "10",
+    "changelog":  "Public app downloads are disabled. Use a direct installer from the owner."
 }
