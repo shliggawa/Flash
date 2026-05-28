@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.22",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.22-x64.exe",
-  "sha256": "4b149be2737e37bb5642ed75d1f7ebf80431ef1ef00c1f8f023093f77f7d7d26",
+  "latestVersion": "0.2.23",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.23-x64.exe",
+  "sha256": "bcfaae8ad7faa703c1996e2e5a5aefb1dbdf0e0a6b1bef560f45f15e6dc2f490",
   "minimumWindowsVersion": "10",
-  "changelog": "Tester channel build with isolated Flash Tester app data, separate installer identity, separate shortcut name, and separate tester update manifest."
+  "changelog": "Locked tester build requiring an online tester key, with one-device binding and signed 15-minute validation responses."
 }
