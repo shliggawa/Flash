@@ -36,12 +36,23 @@ module.zip
 
 Flash downloads the zip, verifies SHA256, extracts it, and loads `entry.html` from the installed module folder.
 
+## Module Runtime Types
+
+Flash now separates module ownership/install state from runtime loading:
+
+- `native-module` / `runtime: bundled`: complex Resolve-native modules that ship inside Flash and use the main Electron preload bridge. Store install enables/unlocks the bundled runtime instead of downloading runnable UI code. ekFlow uses this path.
+- `downloadable-module`: lightweight future modules that can safely run from installed files through a controlled module API.
+- `content-pack`: presets, themes, assets, banners, templates, or packs for a target module. These are downloaded, verified, installed, and read by the target module.
+
+Do not package ekFlow as an iframe snapshot again unless a proper module bridge/runtime exists. It depends on hotkeys, Resolve polling, active freeform, wheel overlays, and native IPC.
+
 ## Current Test Modules
 
 - `ekflow-0.1.46.zip`: initial metadata package.
 - `ekflow-0.1.47.zip`: module-host split test package with `entry.html`.
 - `ekflow-0.1.48.zip`: runtime snapshot package copied from the current app and patched to boot directly into ekFlow mode.
 - `ekflow-0.1.49.zip`: snapshot layout fix so installed ekFlow renders as an embedded module instead of a nested Flash shell.
+- `ekflow-0.1.50`: no runnable zip. ekFlow is a bundled native module; catalog install/unlock state points Flash back to the built-in runtime.
 
 ## Release Process For A Module
 

@@ -1,21 +1,24 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-29T02:40:00+08:00",
+  "updatedAt": "2026-05-29T03:05:00+08:00",
   "modules": {
     "ekflow": {
       "id": "ekflow",
       "name": "ekFlow",
       "shortName": "ekFlow",
       "description": "Spline presets and graph editing for Fusion.",
-      "latestVersion": "0.1.49",
-      "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/ekflow-0.1.49.zip",
-      "sha256": "59f88b36a4bd3000e8e46956334b0bcae2d115191805eaa44d02d0831cce3906",
-      "minFlashVersion": "0.2.13",
-      "entryPage": "module",
-      "entry": "entry.html",
+      "type": "native-module",
+      "runtime": "bundled",
+      "installMode": "unlock",
+      "latestVersion": "0.1.50",
+      "downloadUrl": "",
+      "sha256": "",
+      "minFlashVersion": "0.2.15",
+      "entryPage": "ekflow",
+      "entry": "",
       "bannerClass": "spline-banner",
       "icon": "ekflow",
-      "changelog": "Fixes the ekFlow snapshot module so it opens as an embedded ekFlow surface instead of a nested Flash shell."
+      "changelog": "ekFlow now opens through the bundled native Flash runtime. Store install enables/unlocks it instead of loading the broken iframe snapshot."
     }
   }
 }
