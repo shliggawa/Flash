@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.17",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.17-x64.exe",
-  "sha256": "26a3d6810d6c8a123040a8b3b79ce081447009525591f476a5a7cb344c4cbd7d",
+  "latestVersion": "0.2.18",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.18-x64.exe",
+  "sha256": "986ae39d6b68f2913d41d6d7f66aed93718248a1fdf6339eee50d94e14bd78a8",
   "minimumWindowsVersion": "10",
-  "changelog": "Fixes ekFlow Apply Graph/Modifier to Selection by locking the target spline and resolving the selected range by exact keyframe times before falling back to indexes."
+  "changelog": "Keeps the selection apply target/range fix and adds debug payload logging for Apply Graph/Modifier to Selection diagnostics."
 }
