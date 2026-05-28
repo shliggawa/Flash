@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "latestVersion": "0.2.25",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.25-x64.exe",
-  "sha256": "7cac06c10b3767d7a3b0d78919da214480fe5719adc7f2821e1c9cbff006ffc7",
-  "minimumWindowsVersion": "10",
-  "changelog": "Adds tester key controls to the ekFlow module Configure window while keeping the locked HTTPS license gate."
+    "schemaVersion":  1,
+    "latestVersion":  "0.2.26",
+    "downloadUrl":  "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.26-x64.exe",
+    "sha256":  "7d8e075328221b820b6b5433fc04e0df2478cd3aa7b9ba39e3737df122e80751",
+    "minimumWindowsVersion":  "10",
+    "changelog":  "Fixes tester runtime config parsing so Flash Tester uses its own app data folder and shows the online tester license gate/key controls."
 }
