@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+  <title>ekFlow Module</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script>window.__FLASH_MODULE_SNAPSHOT__ = "ekflow";</script>
+  <script defer src="./renderer.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <button id="flowCollapsedHandle" class="flow-collapsed-handle hidden" title="Click to restore Flash. Drag to move.">
+      <span class="flow-dot" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M13.4 2.8 5.7 13h5.15l-1.2 8.2 8.65-11.35h-5.35z"></path>
+        </svg>
+      </span>
+      <span class="collapsed-copy">
+        <strong>Flash</strong>
+        <small id="collapsedDetail">Press R to apply</small>
+      </span>
+      <span id="collapsedCloseButton" class="collapsed-close" title="Close Flash" aria-label="Close Flash">x</span>
+    </button>
+    <button id="collapsedDrawerToggle" class="collapsed-drawer-toggle hidden" title="Quick panel" aria-label="Open quick panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5"></path></svg>
+    </button>
+    <section id="collapsedDrawer" class="collapsed-drawer hidden" aria-label="Flash quick panel">
+      <div class="mini-section">
+        <div class="mini-label">Selected nodes</div>
+        <div id="collapsedSelectedNodes" class="mini-node-list">Select a Fusion node.</div>
+      </div>
+      <div class="mini-actions">
+        <button id="collapsedCopySpline" title="Copy spline keyframes from the selected Fusion node">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h10v12H8z"></path><path d="M6 16H4V4h10v2"></path></svg>
+          <span>Copy</span>
+        </button>
+        <button id="collapsedPasteSpline" title="Paste copied spline keyframes to the selected Fusion node">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8l2 2v14H6V6z"></path><path d="M9 11h6M9 15h4"></path></svg>
+          <span>Paste</span>
+        </button>
+      </div>
+      <div class="collapsed-mode-row" aria-label="Quick apply mode">
+        <button id="collapsedModePlayhead" class="active">Playhead</button>
+        <button id="collapsedModeAll">Whole node</button>
+      </div>
+      <button id="collapsedGraphPreview" class="collapsed-graph-preview" title="Pick a graph without opening ekFlow">
+        <canvas id="collapsedGraphCanvas" width="168" height="78"></canvas>
+        <span id="collapsedGraphName">Current graph</span>
+      </button>
+    </section>
+    <div id="collapsedPicker" class="collapsed-picker hidden" aria-label="Pick graph"></div>
+    <header class="titlebar">
+      <div class="title-left">
+        <div class="app-mark">F</div>
+        <div>
+          <div class="title">Flash</div>
+          <div id="buildLabel" class="build-label">ekFlow module</div>
+          <div id="status" class="subtitle">Select an animated Fusion tool.</div>
+        </div>
+      </div>
+      <div class="title-actions">
+        <button id="compactToggle" class="tool-button icon-label-button" title="Compact strip mode" aria-label="Toggle compact mode">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 4.5h10M7 19.5h10"></path>
+            <path d="M9 7.5h6v9H9z"></path>
+          </svg>
+          <span>Compact</span>
+        </button>
+        <button id="historyToggle" class="tool-button icon-label-button" title="Toggle apply history" aria-label="Toggle apply history">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.5 4.5h7.2L18 7.8v11.7H7.5z"></path>
+            <path d="M14.7 4.5v3.3H18M10.1 11.1h5.2M10.1 14.1h5.2M10.1 17.1h3.2"></path>
+          </svg>
+          <span>History</span>
+        </button>
+        <button id="editorToggle" class="tool-button icon-label-button" title="Toggle curve editor" aria-label="Toggle curve editor">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.5 17.8h15"></path>
+            <path d="M5.2 16.6C8 16.2 8.5 7 12.2 7c3.1 0 2.9 7.7 6.6 7.9"></path>
+            <path d="M7.2 16.3 9.8 10M14.6 8.7l2.9 5.7"></path>
+            <circle cx="9.8" cy="10" r="1.5"></circle>
+            <circle cx="14.6" cy="8.7" r="1.5"></circle>
+          </svg>
+          <span>Editor</span>
+        </button>
+        <button id="settingsButton" class="icon-button" title="Settings" aria-label="Settings">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.35 4.8 11.1 3h1.8l.75 1.8 1.55.64 1.8-.75 1.27 1.27-.75 1.8.64 1.55 1.84.74v1.8l-1.84.75-.64 1.55.75 1.8-1.27 1.27-1.8-.75-1.55.64-.75 1.84h-1.8l-.75-1.84-1.55-.64-1.8.75-1.27-1.27.75-1.8-.64-1.55L4 11.85v-1.8l1.86-.74.64-1.55-.75-1.8 1.27-1.27 1.8.75z"></path>
+            <circle cx="12" cy="10.95" r="2.65"></circle>
+          </svg>
+        </button>
+        <button id="minimizeButton" class="window-button" title="Minimize" aria-label="Minimize">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"></path></svg>
+        </button>
+        <button id="maximizeButton" class="window-button" title="Maximize" aria-label="Maximize">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h8v10H8z"></path></svg>
+        </button>
+        <button id="closeButton" class="window-button close-window" title="Close" aria-label="Close">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8 8 8M16 8l-8 8"></path></svg>
+        </button>
+      </div>
+      <div class="top-gradient"></div>
+    </header>
+
+    <main id="app" class="app">
+      <aside class="flash-module-rail" aria-label="Flash modules">
+        <button id="flashHomeButton" class="module-tile home-tile" type="button" title="Home">
+          <span class="module-icon home-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 5l7.5 6.5"></path><path d="M7 10.4V19h10v-8.6"></path><path d="M10 19v-5h4v5"></path></svg>
+          </span>
+          <strong>Home</strong>
+        </button>
+        <div class="rail-brand">
+          <span>Modules</span>
+        </div>
+        <div id="flashModuleList" class="flash-module-list"></div>
+      </aside>
+      <section id="flashHomePanel" class="panel flash-home-panel collapsed">
+        <header class="panel-head">
+          <div>
+            <div class="eyebrow">Flash home</div>
+            <h2>Your workspace</h2>
+          </div>
+        </header>
+        <div class="home-grid">
+          <section class="home-modules-section">
+            <div class="home-section-head">
+              <div>
+                <div class="eyebrow">Your modules</div>
+                <h3>Installed</h3>
+              </div>
+              <span id="homeModuleCount" class="home-status-pill">1 module</span>
+            </div>
+            <div id="homeModulesList" class="home-modules-list"></div>
+          </section>
+          <aside class="home-side-actions">
+            <button id="homeStoreButton" class="home-action-card" type="button">
+              <span class="home-card-icon muted">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h11l1 11h-13z"></path><path d="M9 8.5a3 3 0 0 1 6 0"></path></svg>
+              </span>
+              <span><strong>Store</strong><small>Browse and install modules.</small></span>
+            </button>
+            <button class="home-action-card" type="button" disabled>
+              <span class="home-card-icon muted">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.8 19c.9-3.2 3-4.8 6.2-4.8s5.3 1.6 6.2 4.8"></path></svg>
+              </span>
+              <span><strong>Account</strong><small>Licenses and devices.</small></span>
+            </button>
+            <button id="homeFlashSettingsButton" class="home-action-card" type="button">
+              <span class="home-card-icon muted">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.35 4.8 11.1 3h1.8l.75 1.8 1.55.64 1.8-.75 1.27 1.27-.75 1.8.64 1.55 1.84.74v1.8l-1.84.75-.64 1.55.75 1.8-1.27 1.27-1.8-.75-1.55.64-.75 1.84h-1.8l-.75-1.84-1.55-.64-1.8.75-1.27-1.27.75-1.8-.64-1.55L4 11.85v-1.8l1.86-.74.64-1.55-.75-1.8 1.27-1.27 1.8.75z"></path><circle cx="12" cy="10.95" r="2.65"></circle></svg>
+              </span>
+              <span><strong>Settings</strong><small>Flash settings and repair.</small></span>
+            </button>
+          </aside>
+        </div>
+      </section>
+      <div id="storeModal" class="store-modal hidden" role="dialog" aria-modal="true" aria-label="Flash module store">
+        <section class="store-card">
+          <header>
+            <div>
+              <div class="eyebrow">Flash store</div>
+              <h2>Modules</h2>
+            </div>
+            <button id="storeClose" class="overlay-close-button" type="button" aria-label="Close store">x</button>
+          </header>
+          <div id="storeModulesList" class="store-modules-list"></div>
+          <div id="storeCatalogStatus" class="settings-note">Catalog status loading...</div>
+        </section>
+      </div>
+      <div id="flashSettingsModal" class="flash-settings-modal hidden" role="dialog" aria-modal="true" aria-label="Flash settings">
+        <section class="flash-settings-card">
+          <header>
+            <div>
+              <div class="eyebrow">Flash settings</div>
+              <h2>System and repair</h2>
+            </div>
+            <button id="flashSettingsClose" class="overlay-close-button" type="button" aria-label="Close Flash settings">x</button>
+          </header>
+          <div class="flash-settings-grid">
+            <section class="flash-settings-section">
+              <div class="settings-section-title">Resolve integration</div>
+              <div id="flashDiagnosticsList" class="flash-diagnostics-list">
+                <span>Loading diagnostics...</span>
+              </div>
+              <div class="flash-settings-actions">
+                <button id="flashRepairButton" class="flash-action-button repair" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 5.3a4.1 4.1 0 0 0-5.2 5.2L4.8 15.2l4 4 4.7-4.7a4.1 4.1 0 0 0 5.2-5.2l-3 3-2.9-2.9z"></path></svg>
+                  <span>Repair</span>
+                </button>
+                <button id="flashCopyDiagnosticsButton" class="flash-action-button copy" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h10v12H8z"></path><path d="M5 16V4h10"></path></svg>
+                  <span>Copy diagnostics</span>
+                </button>
+                <button id="flashOpenLogsButton" class="flash-action-button logs" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z"></path><path d="M8 9h8M8 13h8M8 17h5"></path></svg>
+                  <span>Open logs</span>
+                </button>
+              </div>
+            </section>
+            <section class="flash-settings-section">
+              <div class="settings-section-title">Flash shell</div>
+              <div id="flashUpdateStatus" class="flash-update-status">
+                <strong>Flash updates</strong>
+                <span>Not checked yet.</span>
+              </div>
+              <div class="flash-settings-actions">
+                <button id="flashCheckUpdateButton" class="flash-action-button copy" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.65"></path><path d="M20 4v6h-6"></path></svg>
+                  <span>Check update</span>
+                </button>
+                <button id="flashDownloadUpdateButton" class="flash-action-button repair hidden" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"></path><path d="m8 10 4 4 4-4"></path><path d="M5 19h14"></path></svg>
+                  <span>Download</span>
+                </button>
+                <button id="flashOpenUpdateButton" class="flash-action-button logs hidden" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h8v4h-3v10h-2V9H8z"></path></svg>
+                  <span>Open update</span>
+                </button>
+              </div>
+              <button id="flashResetShellButton" class="flash-wide-button" type="button">
+                <strong>Reset Flash shell state</strong>
+                <small>Resets Home/module shell state without deleting ekFlow graphs.</small>
+              </button>
+              <div id="flashSettingsStatus" class="settings-note">Ready.</div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <div id="moduleConfigModal" class="module-config-modal hidden" role="dialog" aria-modal="true" aria-label="Configure ekFlow module">
+        <section class="module-config-card">
+          <header>
+            <div>
+              <div class="eyebrow">Module settings</div>
+              <h2 id="moduleConfigTitle">ekFlow</h2>
+              <p id="moduleConfigSubtitle" class="module-config-subtitle">Spline presets and graph editing for Fusion.</p>
+            </div>
+            <button id="moduleConfigClose" class="overlay-close-button" type="button" aria-label="Close module settings">x</button>
+          </header>
+          <div class="module-config-actions">
+            <button id="moduleInstallToggle" class="module-config-action install" type="button">
+              <span class="config-action-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"></path><path d="m8 10 4 4 4-4"></path><path d="M5 19h14"></path></svg>
+              </span>
+              <span><strong id="moduleInstallTitle">Install / uninstall</strong><small id="moduleInstallSubtitle">Manage the module files inside Flash.</small></span>
+            </button>
+            <button id="moduleRepairButton" class="module-config-action repair" type="button">
+              <span class="config-action-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 5.3a4.1 4.1 0 0 0-5.2 5.2L4.8 15.2l4 4 4.7-4.7a4.1 4.1 0 0 0 5.2-5.2l-3 3-2.9-2.9z"></path></svg>
+              </span>
+              <span><strong>Repair</strong><small>Reinstall bridge files and refresh Resolve integration.</small></span>
+            </button>
+            <button id="moduleRemoveButton" class="module-config-action remove" type="button">
+              <span class="config-action-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.75h6l.65 1.5H20v2H4v-2h4.35z"></path><path d="M7.1 10h9.8l-.58 8.15a2.3 2.3 0 0 1-2.3 2.1h-4.04a2.3 2.3 0 0 1-2.3-2.1z"></path><path d="M10.1 12.2v5.1M13.9 12.2v5.1"></path></svg>
+              </span>
+              <span><strong>Remove</strong><small>Remove ekFlow from this Flash workspace.</small></span>
+            </button>
+          </div>
+        </section>
+      </div>
+      <section id="moduleHostPanel" class="panel module-host-panel collapsed">
+        <header class="panel-head">
+          <div>
+            <div class="eyebrow">Module</div>
+            <h2 id="moduleHostTitle">Module</h2>
+          </div>
+          <button id="moduleHostBackButton" class="overlay-close-button" type="button" title="Back to Home" aria-label="Back to Home">x</button>
+        </header>
+        <iframe id="moduleHostFrame" class="module-host-frame" title="Installed module"></iframe>
+        <div id="moduleHostFallback" class="module-host-fallback hidden">
+          <strong>Module entry not found.</strong>
+          <span>Reinstall this module from Store.</span>
+        </div>
+      </section>
+      <section id="galleryPanel" class="panel gallery-panel">
+        <header class="panel-head">
+          <div class="gallery-title-wrap">
+            <div class="eyebrow">Spline gallery</div>
+            <div class="gallery-title-row">
+              <input id="galleryNameInput" class="gallery-name" value="ekFlow" aria-label="Gallery name">
+              <span id="galleryIndexLabel" class="gallery-index">1/1</span>
+            </div>
+          </div>
+          <div class="gallery-actions">
+            <button id="deleteGalleryButton" class="mini-button trash-button" title="Delete current gallery" aria-label="Delete current gallery">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 4.75h6l.65 1.5H20v2H4v-2h4.35L9 4.75Z"></path>
+                <path d="M7.1 10h9.8l-.58 8.15a2.3 2.3 0 0 1-2.3 2.1h-4.04a2.3 2.3 0 0 1-2.3-2.1L7.1 10Z"></path>
+                <path d="M10.1 12.2v5.1M13.9 12.2v5.1"></path>
+              </svg>
+            </button>
+            <button id="prevGalleryButton" class="mini-button hidden" title="Previous gallery">&lt;</button>
+            <button id="nextGalleryButton" class="mini-button" title="Next gallery">&gt;</button>
+          </div>
+        </header>
+
+        <div class="apply-label">Apply to:</div>
+        <div class="segmented" aria-label="Apply mode">
+          <button id="modePlayhead" class="active">Playhead</button>
+          <button id="modeAll">Entire node</button>
+        </div>
+
+        <div id="presetGrid" class="preset-grid"></div>
+        <button id="addPresetButton" class="add-tile" title="New linear graph">+</button>
+        <div id="hoverInfo" class="hover-info">Hover a graph to preview details.</div>
+      </section>
+
+      <div id="editorResizeHandle" class="resize-handle" title="Drag to resize panels"></div>
+
+      <section id="editorPanel" class="panel editor-panel">
+        <div id="editorView">
+          <header class="panel-head">
+            <div>
+              <div class="eyebrow">Curve editor <span id="freeformBadge" class="freeform-badge">FREEFORM MODE</span><span id="syncStatus" class="sync-status hidden"><i></i><span>Synced</span></span></div>
+              <h2 id="activeName">Editor</h2>
+            </div>
+            <div class="editor-head-actions">
+              <button id="modifiersButton" class="secondary">Modifiers</button>
+              <button id="applyButton" class="primary">Apply</button>
+            </div>
+          </header>
+
+          <div class="editor-toolbar">
+            <button id="resetEditorButton">Reset</button>
+            <button id="centerGraphButton" class="icon-only" title="Center graph" aria-label="Center graph">
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"></path><path d="m8 8-4 4 4 4M16 8l4 4-4 4"></path></svg>
+            </button>
+            <button id="undoButton" class="icon-only" title="Undo graph edit" aria-label="Undo graph edit">
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8 5 12l4 4"></path><path d="M5 12h8.5a4.5 4.5 0 1 1 0 9H11"></path></svg>
+            </button>
+            <button id="redoButton" class="icon-only" title="Redo graph edit" aria-label="Redo graph edit">
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 8 4 4-4 4"></path><path d="M19 12h-8.5a4.5 4.5 0 1 0 0 9H13"></path></svg>
+            </button>
+            <button id="advancedEditButton" class="icon-only hidden" title="Freeform values" aria-label="Freeform values">
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 2.8 5.6 13h5l-1 8.2 8.8-11.6h-5.2z"></path><path d="M4 19h6M14 19h6"></path></svg>
+            </button>
+            <button id="importGraphButton" class="icon-only" title="Import graph" aria-label="Import graph">&darr;</button>
+            <button id="exportGraphButton" class="icon-only" title="Export graph" aria-label="Export graph">&uarr;</button>
+            <div class="edit-switches" aria-label="Live editing controls">
+              <label class="mini-switch" title="Read and edit the selected Resolve spline as literal keyframes and values.">
+                <input id="activeEditToggle" type="checkbox">
+                <span>Active freeform</span>
+              </label>
+              <label class="mini-switch" title="Apply editor and gallery changes immediately to the selected node.">
+                <input id="instantApplyToggle" type="checkbox">
+                <span>Instant apply</span>
+              </label>
+            </div>
+          </div>
+
+          <div id="editLockBanner" class="edit-lock-banner hidden">
+            <span id="editLockText">Editing selected keyframes</span>
+            <button id="editLockClear" class="icon-only" title="Clear selected keyframe lock" aria-label="Clear selected keyframe lock">x</button>
+          </div>
+          <div id="modifierGraphNotice" class="modifier-graph-notice hidden">
+            <span class="notice-lock" aria-hidden="true"></span>
+            <strong>Apply modifier first.</strong>
+          </div>
+          <div id="resolveChangePrompt" class="resolve-change-prompt hidden">
+            <span></span>
+            <strong>Changes detected.</strong>
+            <button id="resolveChangeUpdate">Update</button>
+          </div>
+          <div id="freeformSuspendNotice" class="freeform-suspend-notice hidden">
+            Freeform is disabled for path modifiers.
+          </div>
+          <div id="selectionActionNotice" class="selection-action-notice hidden">
+            Select from spline gallery or make a graph
+          </div>
+
+          <canvas id="curveCanvas" width="540" height="360"></canvas>
+          <div id="graphCursor" class="graph-cursor hidden" aria-hidden="true"></div>
+          <div id="graphContextMarker" class="graph-context-marker hidden" aria-hidden="true"></div>
+          <div id="graphContextMenu" class="graph-context-menu hidden"></div>
+          <div id="editValueDialog" class="edit-value-dialog hidden">
+            <button id="editValueClose" class="icon-only" aria-label="Close edit value">x</button>
+            <strong>Edit keyframe</strong>
+            <label><span>Frame</span><input id="editValueFrame" type="text" inputmode="numeric"></label>
+            <label><span>Y value</span><input id="editValueY" type="text" inputmode="decimal"></label>
+            <button id="editValueApply" class="primary">Apply</button>
+          </div>
+          <div id="editorHoverReadout" class="editor-hover-readout">Hover the graph for time/value.</div>
+          <div class="compact-editor-mode" aria-label="Compact apply mode">
+            <button id="compactEditorModePlayhead" class="active">Playhead</button>
+            <button id="compactEditorModeAll">Entire node</button>
+          </div>
+
+          <div class="editor-actions">
+            <input id="presetName" type="text" value="Editor" aria-label="Preset name">
+            <button id="saveButton">Save</button>
+            <button id="cancelActionButton" class="hidden">Cancel action</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="advancedPanel" class="panel advanced-panel collapsed" aria-label="Freeform values">
+        <header class="panel-head">
+          <div>
+            <div class="eyebrow">Freeform values</div>
+            <h2>Keyframe</h2>
+          </div>
+        </header>
+        <div class="advanced-stack">
+          <div id="advancedSuspendOverlay" class="advanced-suspend-overlay hidden">
+            <strong>Freeform does not work on path modifiers.</strong>
+            <small>Try a different node to reenable freeform mode.</small>
+          </div>
+          <div id="advancedTarget" class="advanced-target">Select a keyframe.</div>
+          <div id="advancedTargetDebug" class="advanced-target-debug">Active Freeform target info will appear here.</div>
+          <label class="advanced-control">
+            <span><strong>Frame</strong><small>Resolve timeline frame</small></span>
+            <input id="advancedFrameInput" class="scrub-number" type="text" inputmode="numeric" step="1" value="0" data-scrub="1">
+          </label>
+          <label class="advanced-control">
+            <span><strong>Y value</strong><small>Selected key value</small></span>
+            <input id="advancedValueInput" class="scrub-number" type="text" inputmode="decimal" step="0.001" value="0" data-scrub="0.001">
+          </label>
+          <div class="advanced-help">Edit the selected keyframe frame and value here.</div>
+        </div>
+      </section>
+
+      <section id="modifiersPanel" class="panel modifiers-panel collapsed" aria-label="Curve modifiers">
+        <header class="panel-head">
+          <div>
+            <div class="eyebrow">Curve modifiers</div>
+            <h2>Modifiers</h2>
+          </div>
+          <button id="modifiersCloseButton" class="icon-only" title="Close modifiers" aria-label="Close modifiers">x</button>
+        </header>
+        <div class="modifier-stack">
+          <div class="modifier-grid">
+            <button data-modifier="bounce">Bounce</button>
+            <button data-modifier="elastic">Elastic</button>
+            <button data-modifier="overshoot">Overshoot</button>
+            <button data-modifier="anticipate">Anticipate</button>
+            <button data-modifier="snap">Snap</button>
+            <button data-modifier="soften">Soften</button>
+            <button data-modifier="sine">Sine</button>
+          </div>
+          <label class="modifier-control">
+            <span><strong id="modifierStrengthLabel">Strength</strong><small id="modifierStrengthHint">Amount of overshoot or pull</small></span>
+            <input id="modifierStrength" class="scrub-number" type="number" min="0" max="300" step="1" value="42" data-scrub="1">
+          </label>
+          <label class="modifier-control">
+            <span><strong id="modifierCyclesLabel">Cycles</strong><small id="modifierCyclesHint">Oscillation or bounce count</small></span>
+            <input id="modifierCycles" class="scrub-number" type="number" min="0" max="24" step="0.1" value="2" data-scrub="0.1">
+          </label>
+          <label class="modifier-control">
+            <span><strong id="modifierBiasLabel">Bias</strong><small id="modifierBiasHint">Early or late force</small></span>
+            <input id="modifierBias" class="scrub-number" type="number" min="-300" max="300" step="1" value="0" data-scrub="1">
+          </label>
+          <label class="modifier-control">
+            <span><strong id="modifierDecayLabel">Decay</strong><small id="modifierDecayHint">How quickly energy fades</small></span>
+            <input id="modifierDecay" class="scrub-number" type="number" min="-100" max="300" step="1" value="65" data-scrub="1">
+          </label>
+          <label class="modifier-control">
+            <span><strong id="modifierKeyframesLabel">Keyframes</strong><small id="modifierKeyframesHint">Keys created between the selected pair</small></span>
+            <input id="modifierKeyframes" class="scrub-number" type="number" min="3" max="64" step="1" value="12" data-scrub="1">
+          </label>
+          <label class="modifier-control">
+            <span><strong>Override graph</strong><small>Entire node only while a modifier is active</small></span>
+            <input id="modifierOverride" type="checkbox" checked>
+          </label>
+          <label class="modifier-control">
+            <span><strong>Clamp output</strong><small>Limit extreme sampled values</small></span>
+            <input id="modifierClamp" type="checkbox" checked>
+          </label>
+          <button id="modifierApplyButton" class="primary">Apply modifier</button>
+          <div id="modifierPendingBar" class="modifier-pending-bar hidden">
+            <div>
+              <strong id="modifierPendingName">Modifier</strong>
+              <span>Apply modifier first.</span>
+            </div>
+            <button id="modifierPendingApply" class="primary">Apply</button>
+            <button id="modifierPendingClear" class="icon-only" title="Remove modifier" aria-label="Remove modifier">x</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="settingsHostPanel" class="panel editor-panel settings-host-panel collapsed">
+        <div id="settingsView" class="settings-view hidden">
+          <header class="panel-head">
+            <div>
+              <div class="eyebrow">Preferences</div>
+              <h2>Settings</h2>
+            </div>
+            <button id="backButton" class="overlay-close-button" title="Close settings" aria-label="Close settings">x</button>
+          </header>
+
+          <div class="settings-stack">
+            <section class="settings-group">
+              <div class="settings-section-title">Apply</div>
+              <label class="setting-row" data-desc="Controls whether clicking a preset applies it immediately or only loads it into the editor.">
+                <span><strong>Apply behavior</strong><small>Preset click behavior</small></span>
+                <select id="applyBehavior">
+                  <option value="click">Apply on click</option>
+                  <option value="key">Press key to apply</option>
+                </select>
+              </label>
+              <label class="setting-row" data-desc="Works inside ekFlow. Enable the Resolve-focused global key below if you want the same key to apply while Resolve is active.">
+                <span><strong>Apply key</strong><small>Local shortcut</small></span>
+                <input id="applyKey" type="text" maxlength="1" value="R">
+              </label>
+              <label class="setting-row" data-desc="Shows an operating-system notification at the bottom-right of the screen when a graph is applied.">
+                <span><strong>Desktop notif</strong><small>Custom popup</small></span>
+                <input id="desktopNotify" type="checkbox">
+              </label>
+              <label class="setting-row" data-desc="Plays a short tone when a graph applies successfully or fails.">
+                <span><strong>Sounds</strong><small>Success and failure tones</small></span>
+                <input id="soundEnabled" type="checkbox">
+              </label>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">Hotkeys</div>
+              <div class="settings-grid-2">
+                <label class="setting-row compact-hotkey-row" data-desc="Hold this key to open the wheel. Tap it to apply the current graph.">
+                  <span><strong>Apply / wheel</strong><small>Tap or hold</small></span>
+                  <input id="hotkeyApplyInput" type="text" maxlength="1" value="R">
+                </label>
+                <label class="setting-row compact-hotkey-row" data-desc="Applies a smooth tangent shape to the selected keyframes in the curve editor.">
+                  <span><strong>Smooth keys</strong><small>Selected keyframes</small></span>
+                  <input id="smoothKeyInput" type="text" maxlength="1" value="S">
+                </label>
+                <label class="setting-row compact-hotkey-row" data-desc="Applies linear tangents to selected keyframes or the simple curve.">
+                  <span><strong>Linear keys</strong><small>Selected keyframes</small></span>
+                  <input id="linearKeyInput" type="text" maxlength="1" value="D">
+                </label>
+                <label class="setting-row compact-hotkey-row" data-desc="Deletes selected keyframes in Freeform. Delete and Backspace still work too.">
+                  <span><strong>Delete keys</strong><small>Freeform</small></span>
+                  <input id="deleteKeyInput" type="text" maxlength="1" value="X">
+                </label>
+              </div>
+              <div class="hotkey-cheatsheet">
+                <span><b>Ctrl+A</b> Select all graph keys</span>
+                <span><b>Ctrl+Z</b> Undo</span>
+                <span><b>Ctrl+Shift+Z</b> Redo</span>
+                <span><b>Right drag</b> Pan graph</span>
+                <span><b>Mouse wheel</b> Zoom graph</span>
+                <span><b>Arrows</b> Nudge selected keys</span>
+                <span><b>Esc</b> Unassign hotkey field</span>
+              </div>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">Theme</div>
+              <label class="setting-row" data-desc="Changes ekFlow's color palette, button style, and typeface without changing any graph behavior.">
+                <span><strong>Theme</strong><small>Visual style</small></span>
+                <select id="themeSelect">
+                  <option value="default">ekFlow blue</option>
+                  <option value="arctic">Arctic glass</option>
+                  <option value="graphite">Graphite studio</option>
+                  <option value="ember">Ember contrast</option>
+                  <option value="mint">Mint pro</option>
+                  <option value="orchid">Orchid neon</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Custom theme accent color used for buttons, glows, and selected UI accents.">
+                <span><strong>Accent</strong><small>In-app color picker</small></span>
+                <span class="color-control">
+                  <button id="customThemeAccentButton" class="color-trigger" type="button"><i></i><span>#7BE8FF</span></button>
+                  <input id="customThemeAccent" class="hex-input" type="text" maxlength="7" value="#7be8ff" spellcheck="false">
+                </span>
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Custom theme text style. This only changes ekFlow's UI font stack.">
+                <span><strong>Font</strong><small>Custom theme type</small></span>
+                <select id="customThemeFont">
+                  <option value="aptos">Aptos clean</option>
+                  <option value="segoe">Segoe UI</option>
+                  <option value="bahnschrift">Bahnschrift compact</option>
+                  <option value="consolas">Consolas technical</option>
+                </select>
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Custom theme button roundness. Lower values feel sharper, higher values feel softer.">
+                <span><strong>Button shape</strong><small>Custom theme radius</small></span>
+                <select id="customThemeRadius">
+                  <option value="9">Balanced</option>
+                  <option value="5">Sharp</option>
+                  <option value="16">Soft</option>
+                  <option value="999">Pill</option>
+                </select>
+              </label>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">Background</div>
+              <label class="setting-row custom-theme-row" data-desc="Adds your own image behind the whole ekFlow window. The editor opens after choosing an image.">
+                <span><strong>Image</strong><small>Whole app backdrop</small></span>
+                <span class="file-picker-shell">
+                  <input id="customThemeBackground" type="file" accept="image/*">
+                  <span class="file-picker-button">Choose image</span>
+                  <span id="customThemeBackgroundName" class="file-picker-name">No image selected</span>
+                </span>
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Mixes the custom image with ekFlow's normal generated background. Empty areas show it strongest; controls stay more opaque.">
+                <span><strong>Opacity</strong><small>Image mix</small></span>
+                <input id="customThemeBackgroundOpacity" type="range" min="0" max="1" step="0.01" value="0.48">
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Uses the main colors sampled from your custom background image for panel tints, menus, glows, and picker surfaces.">
+                <span><strong>Use custom background colors</strong><small>Image-driven app tint</small></span>
+                <input id="customThemeBackgroundColors" type="range" min="0" max="1" step="0.01" value="0">
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Adds local glass blur behind panels, menus, and buttons while keeping empty background areas clearer.">
+                <span><strong>Blur</strong><small>Surface softness</small></span>
+                <input id="customThemeBlur" type="range" min="0" max="28" step="1" value="8">
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Removes the custom app background image but keeps the custom colors and font.">
+                <span><strong>Clear</strong><small>Use generated backdrop</small></span>
+                <button id="customThemeClearBackground">Clear</button>
+              </label>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">Header</div>
+              <label class="setting-row custom-theme-row" data-desc="Adds your own image under the animated top gradient.">
+                <span><strong>Header image</strong><small>Top gradient art</small></span>
+                <span class="file-picker-shell">
+                  <input id="customThemeHeader" type="file" accept="image/*">
+                  <span class="file-picker-button">Choose image</span>
+                  <span id="customThemeHeaderName" class="file-picker-name">No image selected</span>
+                </span>
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Controls how visible the custom header image is under the animated gradient.">
+                <span><strong>Header opacity</strong><small>Image strength</small></span>
+                <input id="customThemeHeaderOpacity" type="range" min="0" max="1" step="0.01" value="0.55">
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Softens only the custom header image. The moving gradient stays crisp.">
+                <span><strong>Header blur</strong><small>Image softness</small></span>
+                <input id="customThemeHeaderBlur" type="range" min="0" max="28" step="1" value="0">
+              </label>
+              <label class="setting-row custom-theme-row" data-desc="Removes the custom header image and keeps the animated theme gradient.">
+                <span><strong>Clear header</strong><small>Use theme gradient</small></span>
+                <button id="customThemeClearHeader">Clear</button>
+              </label>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">Resolve</div>
+              <label class="setting-row" data-desc="After applying a graph, ekFlow asks Fusion to refresh its views so the spline panel updates immediately.">
+                <span><strong>Fusion auto-resize</strong><small>Refresh after apply</small></span>
+                <input id="autoResizeFusion" type="checkbox">
+              </label>
+              <label class="setting-row" data-desc="Arms the apply key only while DaVinci Resolve is the foreground app, then disables it outside Resolve.">
+                <span><strong>Resolve apply key</strong><small>Resolve-focused shortcut</small></span>
+                <input id="globalApplyHotkey" type="checkbox">
+              </label>
+              <label class="setting-row" data-desc="Experimental: tries to read the spline closest to the Resolve playhead from currently selected Fusion nodes. This is a scripting approximation, not native Spline tab selection.">
+                <span><strong>Spline page read</strong><small>Experimental selected graph</small></span>
+                <button id="readSplinePageButton">Read</button>
+              </label>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">App shell</div>
+              <label class="setting-row" data-desc="Choose whether the close button exits ekFlow or sends it to the Windows taskbar.">
+                <span><strong>Close button</strong><small>Exit or tray</small></span>
+                <select id="closeBehavior">
+                  <option value="close">Close ekFlow</option>
+                  <option value="taskbar">Send to tray</option>
+                </select>
+              </label>
+              <label class="setting-row" data-desc="Starts ekFlow automatically when you sign in to Windows. Best used once the exe build is installed.">
+                <span><strong>Auto-start</strong><small>Launch with Windows</small></span>
+                <input id="autoLaunch" type="checkbox">
+              </label>
+              <label class="setting-row" data-desc="Writes apply/read failures and bridge events to a log file for troubleshooting.">
+                <span><strong>Debug logs</strong><small>Bridge diagnostics</small></span>
+                <input id="debugLogging" type="checkbox">
+              </label>
+              <label class="setting-row" data-desc="Opens ekFlow's local log file. Useful when a graph does not apply.">
+                <span><strong>Open logs</strong><small>Debug file</small></span>
+                <button id="openLogsButton">Open</button>
+              </label>
+              <div id="appShellStatus" class="settings-note">App shell status loading...</div>
+            </section>
+
+            <section class="settings-group">
+              <div class="settings-section-title">Files and layout</div>
+              <label class="setting-row" data-desc="Restores the default panel order, panel sizes, zoom, and window size.">
+                <span><strong>Reset layout</strong><small>Default workspace</small></span>
+                <button id="resetLayoutButton">Reset</button>
+              </label>
+              <div class="settings-grid-3">
+                <label class="setting-row" data-desc="Export the currently loaded graph as a single ekFlow preset file.">
+                  <span><strong>Export</strong><small>Current graph</small></span>
+                  <button id="exportGalleryButton" class="icon-only" title="Export graph" aria-label="Export graph">&uarr;</button>
+                </label>
+                <label class="setting-row" data-desc="Export every preset in the current gallery as separate ekFlow files into a folder.">
+                  <span><strong>Batch out</strong><small>Gallery files</small></span>
+                  <button id="batchExportButton" class="icon-only" title="Batch export presets" aria-label="Batch export presets">&uarr;</button>
+                </label>
+                <label class="setting-row" data-desc="Import one or more ekFlow preset files at once. Defaults stay locked.">
+                  <span><strong>Batch in</strong><small>Add graphs</small></span>
+                  <button id="importGalleryButton" class="icon-only" title="Import graph" aria-label="Import graph">&darr;</button>
+                </label>
+              </div>
+            </section>
+          </div>
+
+          <div id="settingsDescription" class="settings-note">Hover a setting to see what it changes.</div>
+        </div>
+      </section>
+
+      <div id="imageEditorModal" class="image-editor-modal hidden" role="dialog" aria-modal="true" aria-label="Customize image">
+        <div class="image-editor-card">
+          <header>
+            <div>
+              <div class="eyebrow">Custom image</div>
+              <h2 id="imageEditorTitle">Background</h2>
+            </div>
+            <button id="imageEditorClose" class="overlay-close-button" type="button" aria-label="Close image editor">x</button>
+          </header>
+          <div id="imageEditorStage" class="image-editor-stage">
+            <img id="imageEditorImage" alt="">
+            <div class="image-editor-frame"></div>
+          </div>
+          <div class="image-editor-controls">
+            <div class="fit-buttons" aria-label="Image fit">
+              <button id="imageFitCover" type="button" data-fit="cover">Cover</button>
+              <button id="imageFitContain" type="button" data-fit="contain">Contain</button>
+              <button id="imageFitStretch" type="button" data-fit="stretch">Stretch</button>
+            </div>
+            <label class="mini-range"><span>Zoom</span><input id="imageEditorZoom" type="range" min="0.35" max="4" step="0.01" value="1"></label>
+            <label class="mini-range"><span>Opacity</span><input id="imageEditorOpacity" type="range" min="0" max="1" step="0.01" value="0.5"></label>
+            <label class="mini-range"><span>Blur</span><input id="imageEditorBlur" type="range" min="0" max="28" step="1" value="0"></label>
+            <div class="image-editor-actions">
+              <button id="imageEditorCancel" type="button">Cancel</button>
+              <button id="imageEditorApply" class="primary" type="button">Apply image</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="historyResizeHandle" class="resize-handle" title="Drag to resize panels"></div>
+
+      <section id="historyPanel" class="panel history-panel collapsed">
+        <header class="panel-head">
+          <div>
+            <div class="eyebrow">Apply history</div>
+            <h2>Revert</h2>
+          </div>
+          <div class="overlay-head-actions">
+            <button id="clearHistoryButton" class="secondary">Clear</button>
+            <button id="historyCloseButton" class="overlay-close-button" title="Close history" aria-label="Close history">x</button>
+          </div>
+        </header>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+    <div id="compactDots" class="compact-dots hidden" aria-label="Compact pages"></div>
+
+    <div id="toast" class="toast hidden">Graph applied</div>
+    <div id="assignBurst" class="assign-burst hidden">★</div>
+    <div id="quickWheel" class="quick-wheel hidden" aria-hidden="true">
+      <div id="wheelCenter" class="wheel-center" title="Open compact editor">
+        <strong>ekFlow</strong>
+        <span>Assigned graphs</span>
+        <button id="wheelOpenMain" class="wheel-open-main" title="Open compact editor" aria-label="Open compact editor">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.2 2.8 5.6 13h5l-1 8.2 8.8-11.6h-5.2z"></path></svg>
+        </button>
+      </div>
+      <div id="wheelSlots" class="wheel-slots"></div>
+      <div class="wheel-modes">
+        <button id="wheelPlayhead" class="active">Playhead</button>
+        <button id="wheelAll">Whole node</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
