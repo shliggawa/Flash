@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.19",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.19-x64.exe",
-  "sha256": "026a31fe4b60ab6b622000faff5b45f1d0dc1f8f671b9bf9cce5aab8962f2a17",
+  "latestVersion": "0.2.20",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.20-x64.exe",
+  "sha256": "ada5faadfb6b98084061566d085476f7e88970cdc8e8b41997557d4599bba470",
   "minimumWindowsVersion": "10",
-  "changelog": "Adds explicit exit/cancel controls for Apply Graph/Modifier to Selection modes and exits those modes after every apply attempt, even when Resolve rejects the write."
+  "changelog": "Restores the Flash module rail on ekFlow, moves Home back to the left rail, and preserves ekFlow add/install state when switching between ekFlow and Home."
 }
