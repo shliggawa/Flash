@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.27",
-    "downloadUrl":  "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.27-x64.exe",
-    "sha256":  "03f813b81c97921d64ea5102c777fddc1f89ca1404865d5eab8bef547dd2e1cf",
+    "latestVersion":  "0.2.29",
+    "downloadUrl":  "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.29-x64.exe",
+    "sha256":  "a85eeeb5358a4bd7837b962f93fa5ecdb649c182f98fd7d3e188f3323c85cdf5",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes tester runtime/license JSON parsing, isolates Flash Tester app data, and gives the tester build its own Windows app identity."
+    "changelog":  "Hardens tester licensing: clean-installs program files on update, gates Resolve-facing ekFlow actions and wheel entry points behind online tester validation, and rechecks tester keys more frequently."
 }
