@@ -1,0 +1,24 @@
+{
+  "id": "ekflow",
+  "name": "ekFlow",
+  "version": "0.1.46",
+  "type": "resolve-module",
+  "entryPage": "ekflow",
+  "description": "Spline presets and graph editing for Fusion.",
+  "assets": {
+    "banner": "assets/ekflow-banner.png"
+  },
+  "freeFeatures": [
+    "Basic graph editor",
+    "Basic preset gallery",
+    "Bounce modifier"
+  ],
+  "proFeatures": [
+    "Active Freeform",
+    "Full modifier set",
+    "Custom themes and backgrounds",
+    "Wheel overlay",
+    "Multiple galleries",
+    "Import and export"
+  ]
+}
