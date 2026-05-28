@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.24",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.24-x64.exe",
-  "sha256": "3bd8ae808aa05de00799b831b1e915336ef10b13fe9ba2f1f0e8669d644caf21",
+  "latestVersion": "0.2.25",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.25-x64.exe",
+  "sha256": "7cac06c10b3767d7a3b0d78919da214480fe5719adc7f2821e1c9cbff006ffc7",
   "minimumWindowsVersion": "10",
-  "changelog": "Locked HTTPS tester build requiring an online tester key, with one-device binding and signed 15-minute validation responses."
+  "changelog": "Adds tester key controls to the ekFlow module Configure window while keeping the locked HTTPS license gate."
 }
