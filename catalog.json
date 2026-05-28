@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-29T00:00:00+08:00",
+  "updatedAt": "2026-05-29T02:05:00+08:00",
   "modules": {
     "ekflow": {
       "id": "ekflow",
       "name": "ekFlow",
       "shortName": "ekFlow",
       "description": "Spline presets and graph editing for Fusion.",
-      "latestVersion": "0.1.46",
-      "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/ekflow-0.1.46.zip",
-      "sha256": "b291ccfa6a028d12f5da1db52de9443c0fcbcab9030376f91ddc9b8e853f6232",
-      "minFlashVersion": "0.2.9",
-      "entryPage": "ekflow",
+      "latestVersion": "0.1.47",
+      "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/ekflow-0.1.47.zip",
+      "sha256": "1bba2939304b91147018d4f40e25a24e5673905e290e3ec0fdf333ed8975119c",
+      "minFlashVersion": "0.2.13",
+      "entryPage": "module",
+      "entry": "entry.html",
       "bannerClass": "spline-banner",
       "icon": "ekflow",
-      "changelog": "Initial downloadable ekFlow module package."
+      "changelog": "Adds hosted module entry so ekFlow loads from the installed module folder."
     }
   }
 }

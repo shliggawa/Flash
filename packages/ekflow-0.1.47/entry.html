@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ekFlow Module</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Aptos, "Segoe UI Variable Text", "Segoe UI", sans-serif;
+      background: #050b16;
+      color: #eef7ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: minmax(160px, 36vh) 1fr;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(123, 232, 255, .18), transparent 32%),
+        linear-gradient(135deg, #040814, #071322 58%, #040814);
+      overflow: hidden;
+    }
+    .banner {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(2, 7, 16, .1), rgba(2, 7, 16, .62)),
+        url("./assets/ekflow-banner.png") center / cover no-repeat;
+    }
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(3, 8, 18, .72), transparent 65%);
+    }
+    .title {
+      position: absolute;
+      left: 22px;
+      bottom: 18px;
+      z-index: 1;
+      display: grid;
+      gap: 5px;
+    }
+    .title span {
+      color: rgba(123, 232, 255, .8);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1;
+    }
+    main {
+      display: grid;
+      align-content: center;
+      gap: 14px;
+      padding: 22px;
+    }
+    .panel {
+      display: grid;
+      gap: 8px;
+      max-width: 560px;
+      padding: 14px;
+      border: 1px solid rgba(123, 232, 255, .18);
+      border-radius: 16px;
+      background: rgba(7, 15, 30, .72);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .32);
+    }
+    strong { font-size: 14px; }
+    p {
+      margin: 0;
+      color: rgba(190, 213, 242, .78);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #061224;
+      background: linear-gradient(135deg, #56f59a, #7be8ff);
+      font-size: 10px;
+      font-weight: 850;
+    }
+  </style>
+</head>
+<body>
+  <section class="banner">
+    <div class="title">
+      <span>Installed module</span>
+      <h1>ekFlow</h1>
+    </div>
+  </section>
+  <main>
+    <section class="panel">
+      <div class="status">Module loaded from Flash Store</div>
+      <strong>ekFlow runtime split stage 1</strong>
+      <p>This module is being loaded from the downloaded module folder instead of being treated as preinstalled Flash shell content.</p>
+      <p>The next split pass moves the full graph editor runtime into this module entry.</p>
+    </section>
+  </main>
+</body>
+</html>
