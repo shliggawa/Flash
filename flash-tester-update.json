@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.29",
-    "downloadUrl":  "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.29-x64.exe",
-    "sha256":  "a85eeeb5358a4bd7837b962f93fa5ecdb649c182f98fd7d3e188f3323c85cdf5",
+    "latestVersion":  "0.2.31",
+    "downloadUrl":  "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashTesterSetup-0.2.31-x64.exe",
+    "sha256":  "29aca869b2e94924263f879ceb9e9dde43af81436dc8910e2f3b6179ab6b1a8a",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Hardens tester licensing: clean-installs program files on update, gates Resolve-facing ekFlow actions and wheel entry points behind online tester validation, and rechecks tester keys more frequently."
+    "changelog":  "Hardens tester licensing and fixes tester installer location. Installer now targets Flash Tester, uses NSIS update/uninstall flow, gates Resolve-facing ekFlow actions and wheel entry points, and rechecks online tester keys every 30 seconds."
 }
