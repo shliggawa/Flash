@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.20",
-  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/Flash-0.2.20-x64.exe",
-  "sha256": "ada5faadfb6b98084061566d085476f7e88970cdc8e8b41997557d4599bba470",
+  "latestVersion": "0.2.21",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/downloads/FlashSetup-0.2.21-x64.exe",
+  "sha256": "3692991a7dc4507f6630802500b99a73f40c7342bfbf0114f73751b4ec00ef14",
   "minimumWindowsVersion": "10",
-  "changelog": "Restores the Flash module rail on ekFlow, moves Home back to the left rail, and preserves ekFlow add/install state when switching between ekFlow and Home."
+  "changelog": "Adds tester license infrastructure, signed online validation hooks, installer packaging, and app-side protection gates. License enforcement is ready to enable once the license server URL is deployed."
 }
