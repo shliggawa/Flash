@@ -1,8 +1,8 @@
 {
-    "schemaVersion":  1,
-    "latestVersion":  "0.2.31",
-    "downloadUrl":  "",
-    "sha256":  "",
-    "minimumWindowsVersion":  "10",
-    "changelog":  "Public tester downloads are disabled. Use a direct tester installer from the owner."
+  "schemaVersion": 1,
+  "latestVersion": "0.2.60",
+  "downloadUrl": "https://raw.githubusercontent.com/shliggawa/Flash/main/releases/FlashTesterSetup-0.2.60-x64.exe",
+  "sha256": "C08C7E390B3513CF5D69833A33BBF748C2B8FFB515512C5DCB645FF4C8447E46",
+  "minimumWindowsVersion": "10",
+  "changelog": "Adds the bundled ek-Totoro theme and fixes theme switching so the background/header settings apply through the reliable custom theme render path."
 }
