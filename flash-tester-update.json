@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.71",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.71/FlashSetup-0.2.71-x64.exe",
-    "sha256":  "bab69d2a880dfc53e61c857ceab7d67468effc550d9764a1c2e61472b8b7ebc8",
+    "latestVersion":  "0.2.72",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.72/FlashSetup-0.2.72-x64.exe",
+    "sha256":  "c01de41181ac2e568fa30bc471d000fb1a1a201c1279dfabd44b4ab9bbb4afad",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Improves update install and restart reliability, cleans up the Home action buttons, improves Factory Reset, fixes Studio Light graph theming, and refreshes ek-Totoro theme media/settings."
+    "changelog":  "Fixes ek-Totoro theme backgrounds and settings so they apply immediately without needing to touch opacity sliders."
 }
