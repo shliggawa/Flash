@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.72",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.72/FlashSetup-0.2.72-x64.exe",
-    "sha256":  "c01de41181ac2e568fa30bc471d000fb1a1a201c1279dfabd44b4ab9bbb4afad",
+    "latestVersion":  "0.2.73",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.73/FlashSetup-0.2.73-x64.exe",
+    "sha256":  "3d80ae9a79b5f611669dab024ccce90b0bcd0ae2f9c8c9f6050d9db39c90e11d",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ek-Totoro theme backgrounds and settings so they apply immediately without needing to touch opacity sliders."
+    "changelog":  "Fixes the update installer launching after download, restores the Flash icon, and keeps the ek-Totoro theme fixes."
 }
