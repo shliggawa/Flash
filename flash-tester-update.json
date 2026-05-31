@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.68",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.68/FlashSetup-0.2.68-x64.exe",
-  "sha256": "033985597573c501eb5b98f354971e07f1605ace46195dea34b58529e1b08342",
+  "latestVersion": "0.2.69",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.69/FlashSetup-0.2.69-x64.exe",
+  "sha256": "943fdcf4eaad3dd1b62c353de9d9f41e7bc2703e87bfabea6743ee90efd11b52",
   "minimumWindowsVersion": "10",
-  "changelog": "Fixes stale Flash launch paths, repairs Flash shortcuts, and prevents old Flash.exe installs from being reopened after an update."
+  "changelog": "Fixes stale Start Menu and Desktop Flash shortcuts, and prevents old Flash.exe installs from being reopened after an update."
 }
