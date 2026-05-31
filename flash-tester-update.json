@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.76",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.76/FlashSetup-0.2.76-x64.exe",
-    "sha256":  "05bb8da65379c337c16a2f346c471f263ff821832e88aa257d33c68b508969d1",
+    "latestVersion":  "0.2.77",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.77/FlashSetup-0.2.77-x64.exe",
+    "sha256":  "37d066d1b3dbf1924153c234566b7e7d59dd977296cf559841e966acfc63aef1",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ek-Totoro so it uses the bundled theme preset copied from the original Custom theme and replaces old broken saved ek-Totoro data."
+    "changelog":  "Fixes ek-Totoro inside the actual ekFlow module so it matches the copied Custom theme more closely, including background opacity, header image, panel transparency, and accent colors."
 }
