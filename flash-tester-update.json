@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "latestVersion": "0.2.70",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.70/FlashSetup-0.2.70-x64.exe",
-  "sha256": "6c42cbd737ee94be70f0344734aa84f79a85a458bdf17c71f0ed2b247d847100",
-  "minimumWindowsVersion": "10",
-  "changelog": "Improves theme separation, fixes Studio Light readability, adds a Flash Home theme picker, adds Factory Reset for ekFlow modules, and improves update install/restart reliability."
+    "schemaVersion":  1,
+    "latestVersion":  "0.2.71",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.71/FlashSetup-0.2.71-x64.exe",
+    "sha256":  "bab69d2a880dfc53e61c857ceab7d67468effc550d9764a1c2e61472b8b7ebc8",
+    "minimumWindowsVersion":  "10",
+    "changelog":  "Improves update install and restart reliability, cleans up the Home action buttons, improves Factory Reset, fixes Studio Light graph theming, and refreshes ek-Totoro theme media/settings."
 }
