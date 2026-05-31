@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.67",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.67/FlashSetup-0.2.67-x64.exe",
-  "sha256": "3bb57a7fc42be486da8bd8e75b02a39c9bce072f4fa527cf90db1447c6d1613b",
+  "latestVersion": "0.2.68",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.68/FlashSetup-0.2.68-x64.exe",
+  "sha256": "033985597573c501eb5b98f354971e07f1605ace46195dea34b58529e1b08342",
   "minimumWindowsVersion": "10",
-  "changelog": "Fixes update install and restart reliability, moves the update progress bar into Home, cleans up the update success popup, and prevents false update success messages."
+  "changelog": "Fixes stale Flash launch paths, repairs Flash shortcuts, and prevents old Flash.exe installs from being reopened after an update."
 }
