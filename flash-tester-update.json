@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.66",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.66/FlashSetup-0.2.66-x64.exe",
-  "sha256": "93a361483da5b4badc1c60f6c93d1c424cb8509286098b1256aae852cc8532fb",
+  "latestVersion": "0.2.67",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.67/FlashSetup-0.2.67-x64.exe",
+  "sha256": "3bb57a7fc42be486da8bd8e75b02a39c9bce072f4fa527cf90db1447c6d1613b",
   "minimumWindowsVersion": "10",
-  "changelog": "Fixes wheel transparency and close controls, fixes ek-Totoro theme image loading, adds Discord to Home, smooths Home buttons, adds Studio Light, makes Resolve theme monochrome, and improves update restart cleanup."
+  "changelog": "Fixes update install and restart reliability, moves the update progress bar into Home, cleans up the update success popup, and prevents false update success messages."
 }
