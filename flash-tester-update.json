@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.61",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-tester-v0.2.61/FlashTesterSetup-0.2.61-x64.exe",
-  "sha256": "120A0C2BA6E7BBA2CEF054D1535C10CB8ABB7F4F0FDFDE9B6E7FDA64CEE0938D",
+  "latestVersion": "0.2.66",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.66/FlashSetup-0.2.66-x64.exe",
+  "sha256": "93a361483da5b4badc1c60f6c93d1c424cb8509286098b1256aae852cc8532fb",
   "minimumWindowsVersion": "10",
-  "changelog": "Improves compact mode sizing, update progress placement, Active Freeform frame snapping, ek-Totoro theme application, modifier timing/predictability, and R-wheel stability."
+  "changelog": "Fixes wheel transparency and close controls, fixes ek-Totoro theme image loading, adds Discord to Home, smooths Home buttons, adds Studio Light, makes Resolve theme monochrome, and improves update restart cleanup."
 }
