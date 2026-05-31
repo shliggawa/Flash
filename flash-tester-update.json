@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.75",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.75/FlashSetup-0.2.75-x64.exe",
-    "sha256":  "d3d42a070f4d6bdfc595235ad3f4a4255d60ac09996895b4aefe5d9524ba5f77",
+    "latestVersion":  "0.2.76",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.76/FlashSetup-0.2.76-x64.exe",
+    "sha256":  "05bb8da65379c337c16a2f346c471f263ff821832e88aa257d33c68b508969d1",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes Flash opening repeatedly after restart by removing old startup entries and making the Resolve startup listener safer."
+    "changelog":  "Fixes ek-Totoro so it uses the bundled theme preset copied from the original Custom theme and replaces old broken saved ek-Totoro data."
 }
