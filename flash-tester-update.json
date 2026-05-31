@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.69",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.69/FlashSetup-0.2.69-x64.exe",
-  "sha256": "943fdcf4eaad3dd1b62c353de9d9f41e7bc2703e87bfabea6743ee90efd11b52",
+  "latestVersion": "0.2.70",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.70/FlashSetup-0.2.70-x64.exe",
+  "sha256": "6c42cbd737ee94be70f0344734aa84f79a85a458bdf17c71f0ed2b247d847100",
   "minimumWindowsVersion": "10",
-  "changelog": "Fixes stale Start Menu and Desktop Flash shortcuts, and prevents old Flash.exe installs from being reopened after an update."
+  "changelog": "Improves theme separation, fixes Studio Light readability, adds a Flash Home theme picker, adds Factory Reset for ekFlow modules, and improves update install/restart reliability."
 }
