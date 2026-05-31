@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.74",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.74/FlashSetup-0.2.74-x64.exe",
-    "sha256":  "f2a9f0bd49ce57c68be7be6ffc0f89e4cb64b818c92cad137d8243aaca9d6a48",
+    "latestVersion":  "0.2.75",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.75/FlashSetup-0.2.75-x64.exe",
+    "sha256":  "d3d42a070f4d6bdfc595235ad3f4a4255d60ac09996895b4aefe5d9524ba5f77",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ek-Totoro so old broken saved theme data is repaired and the bundled Totoro background, header, accent, and settings apply automatically."
+    "changelog":  "Fixes Flash opening repeatedly after restart by removing old startup entries and making the Resolve startup listener safer."
 }
