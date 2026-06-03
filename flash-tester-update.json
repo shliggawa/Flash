@@ -1,7 +1,7 @@
 {
     "schemaVersion":  1,
     "latestVersion":  "0.2.80",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.80/FlashSetup-0.2.80-x64-obfuscated.exe",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.80/FlashSetup-0.2.80-x64.exe",
     "sha256":  "4f42cc7f741de789be5e8f3f0934e7a39f19f88571305d35cf01d516730551bc",
     "minimumWindowsVersion":  "10",
     "changelog":  "Fixes compact mode expanding, tightens compact layout, adds modifier time offset, and fixes setup opening older Flash installs after updating."
