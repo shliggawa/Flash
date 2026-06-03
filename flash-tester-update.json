@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.78",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.78/FlashSetup-0.2.78-x64.exe",
-    "sha256":  "dd0faa01a376d1df27654679c79a26e94d6b21142f03d0eb0232894f80c6569d",
+    "latestVersion":  "0.2.80",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.80/FlashSetup-0.2.80-x64-obfuscated.exe",
+    "sha256":  "4f42cc7f741de789be5e8f3f0934e7a39f19f88571305d35cf01d516730551bc",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ek-Totoro header crop and position by making the saved header zoom affect the actual header render path in both Flash and ekFlow."
+    "changelog":  "Fixes compact mode expanding, tightens compact layout, adds modifier time offset, and fixes setup opening older Flash installs after updating."
 }
