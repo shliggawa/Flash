@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.81",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.81/FlashSetup-0.2.81-x64.exe",
-    "sha256":  "d988cb0a046761c31a5f1723ac63f02d500b1cda64299c35ac36f2052aaf5563",
+    "latestVersion":  "0.2.82",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.82/FlashSetup-0.2.82-x64-wpf-ui.exe",
+    "sha256":  "c886572dc8f7dcaa9cdaaa01ae0108e8a7edfe9709d9dcc9481aba2aed261508",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Improves update downloads, prevents broken partial installers, fixes update launch reliability, and keeps Air as the default theme."
+    "changelog":  "Adds safer path handling for modifiers, updates ekFlow Free theme defaults, and includes the refreshed Flash installer UI."
 }
