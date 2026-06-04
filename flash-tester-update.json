@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.82",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.82/FlashSetup-0.2.82-x64-wpf-ui.exe",
-    "sha256":  "c886572dc8f7dcaa9cdaaa01ae0108e8a7edfe9709d9dcc9481aba2aed261508",
+    "latestVersion":  "0.2.83",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.83/FlashSetup-0.2.83-x64-wpf-ui.exe",
+    "sha256":  "06fc5abe40f36d8d1c93c4dd871a39b2517b45b49e826cbb695e3d3c13e9fa3a",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Adds safer path handling for modifiers, updates ekFlow Free theme defaults, and includes the refreshed Flash installer UI."
+    "changelog":  "Fixes update detection, adds safer path handling for modifiers, and updates ekFlow Free theme defaults."
 }
