@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.84",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.84/FlashSetup-0.2.84-x64.exe",
-    "sha256":  "6204c5da87ddbcb0d9a43953a738b6c3447513ec437dd48b8db587791e432c9c",
+    "latestVersion":  "0.2.85",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.85/FlashSetup-0.2.85-x64.exe",
+    "sha256":  "4699c43cd8a68d50251aabd26b0286a2c4bc7e659fd43c9eb7e3b6c85e1c234b",
     "minimumWindowsVersion":  "10",
-    "changelog":  "First public Flash release. Adds the new wrapped installer UI, improves update download layout, and switches Flash to the public stable channel."
+    "changelog":  "Fixes the Latest release card image sizing so release art no longer appears zoomed in or resets after switching tabs."
 }
