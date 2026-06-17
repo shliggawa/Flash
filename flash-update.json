@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.87",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.87/FlashSetup-0.2.87-x64.exe",
-    "sha256":  "0c2ba7be0da11ad08bb53570759b73faaa310e6a9ff3339ec8cdd5c23f5c3b1e",
+    "latestVersion":  "0.2.88",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.88/FlashSetup-0.2.88-x64.exe",
+    "sha256":  "305f3e831658a05d414037216c2a546efc000b12cd4e446ec2471a6300f62aee",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ekFlow Free licensing, makes ekFlow Pro request Pro keys, keeps Free unlocked, and relaunches the updated Flash executable after updates."
+    "changelog":  "Fixes the public updater and installer so updates relaunch Flash instead of Flash Tester, creates the Flash desktop shortcut, and keeps the wrapped installer UI."
 }
