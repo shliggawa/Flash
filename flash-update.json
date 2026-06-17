@@ -2,7 +2,7 @@
     "schemaVersion":  1,
     "latestVersion":  "0.2.87",
     "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.87/FlashSetup-0.2.87-x64.exe",
-    "sha256":  "ac9ded69465f8d14d562364773cfabe09ea8a568b591a70919ea5c14c3324cca",
+    "sha256":  "0c2ba7be0da11ad08bb53570759b73faaa310e6a9ff3339ec8cdd5c23f5c3b1e",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ekFlow Free licensing, makes ekFlow Pro request Pro keys, and keeps Free unlocked."
+    "changelog":  "Fixes ekFlow Free licensing, makes ekFlow Pro request Pro keys, keeps Free unlocked, and relaunches the updated Flash executable after updates."
 }
