@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.85",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.85/FlashSetup-0.2.85-x64.exe",
-    "sha256":  "4699c43cd8a68d50251aabd26b0286a2c4bc7e659fd43c9eb7e3b6c85e1c234b",
+    "latestVersion":  "0.2.86",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.86/FlashSetup-0.2.86-x64.exe",
+    "sha256":  "d8e9a2df24b56e04af756b55fc9e37ebc6755bd18d76aa8c0d4730df1e59d95e",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes the Latest release card image sizing so release art no longer appears zoomed in or resets after switching tabs."
+    "changelog":  "Separates ekFlow Free and Pro profiles, applies Air typography across themes, and includes the latest UI fixes."
 }
