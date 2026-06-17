@@ -2,7 +2,7 @@
     "schemaVersion":  1,
     "latestVersion":  "0.2.86",
     "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.86/FlashSetup-0.2.86-x64.exe",
-    "sha256":  "d8e9a2df24b56e04af756b55fc9e37ebc6755bd18d76aa8c0d4730df1e59d95e",
+    "sha256":  "7c2775dc1bf15c734e9377edb31e1cd5b76a447dd1ff1d77534bdd419d2dfb0c",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Separates ekFlow Free and Pro profiles, applies Air typography across themes, and includes the latest UI fixes."
+    "changelog":  "Fixes Flash update downloads, separates ekFlow Free and Pro profiles, and applies Air typography across themes."
 }
