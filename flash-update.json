@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.89",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.89/FlashSetup-0.2.89-x64.exe",
-    "sha256":  "d55d84dc275b78a4589d5bb85d22fb50f2c693a9570466b19bb77ddd144e4aa6",
+    "latestVersion":  "0.2.90",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.90/FlashSetup-0.2.90-x64.exe",
+    "sha256":  "b8cb0d0f9a475911e7a43e7de488030a129e094b5e9a80efc863b0441b830b51",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Adds the ekFlow Pro Spawn wheel near mouse setting and keeps the wrapped public installer UI."
+    "changelog":  "Fixes update version detection, changes updates to download to Downloads with a manual Open button, improves quick wheel edge positioning, fixes the Flash desktop shortcut target, and adds the Discord Status homepage banner."
 }
