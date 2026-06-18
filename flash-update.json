@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.88",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.88/FlashSetup-0.2.88-x64.exe",
-    "sha256":  "305f3e831658a05d414037216c2a546efc000b12cd4e446ec2471a6300f62aee",
+    "latestVersion":  "0.2.89",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.89/FlashSetup-0.2.89-x64.exe",
+    "sha256":  "d55d84dc275b78a4589d5bb85d22fb50f2c693a9570466b19bb77ddd144e4aa6",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes the public updater and installer so updates relaunch Flash instead of Flash Tester, creates the Flash desktop shortcut, and keeps the wrapped installer UI."
+    "changelog":  "Adds the ekFlow Pro Spawn wheel near mouse setting and keeps the wrapped public installer UI."
 }
