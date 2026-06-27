@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.92",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.92/FlashSetup-0.2.92-x64.exe",
-    "sha256":  "6210b8778c553411523d2dab64b043b0bd3ea62a941c22f88363e9ee18b2cd5e",
+    "latestVersion":  "0.2.93",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.93/FlashSetup-0.2.93-x64.exe",
+    "sha256":  "ac219a73e8bbb805a320594e2b4a2baba6afa3c43e26140a6acc47a7c069d385",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes clean installs missing Resolve workflow plugin files, the Flash runtime link, and the Fusion utility script by unpacking integration sources and installing/repairing them automatically."
+    "changelog":  "Adds an ekFlow compact-mode memory guard, fixes Start with Resolve for local/dev launch paths, and reduces compact-mode background redraw work."
 }
