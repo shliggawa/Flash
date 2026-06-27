@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.90",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.90/FlashSetup-0.2.90-x64.exe",
-    "sha256":  "b8cb0d0f9a475911e7a43e7de488030a129e094b5e9a80efc863b0441b830b51",
+    "latestVersion":  "0.2.91",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.91/FlashSetup-0.2.91-x64.exe",
+    "sha256":  "cbed32351e4d06426aa93afda49e5c2a6c9929546d11c0cc8bc20b0828e3d838",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes update version detection, changes updates to download to Downloads with a manual Open button, improves quick wheel edge positioning, fixes the Flash desktop shortcut target, and adds the Discord Status homepage banner."
+    "changelog":  "Ships the Flash Local Tester Variant as the next public build, with the Home 2 focused experience, public Flash branding, latest Resolve listener fixes, and the variant library/sidebar behavior."
 }
