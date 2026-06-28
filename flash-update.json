@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.93",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.93/FlashSetup-0.2.93-x64.exe",
-    "sha256":  "7ed0e1dbc2085e56740978a026397e1d59c6b7420e0a790111a97ad3555aea25",
+    "latestVersion":  "0.2.94",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.94/FlashSetup-0.2.94-x64.exe",
+    "sha256":  "9ea4c27b92d2989fcf945e82ced06f3718d2900ae06078f481393c080f26e4de",
     "minimumWindowsVersion":  "10",
     "changelog":  "Adds an ekFlow compact-mode memory guard, fixes Start with Resolve for local/dev launch paths, and reduces compact-mode background redraw work."
 }
