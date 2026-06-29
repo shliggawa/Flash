@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.95",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.95/FlashSetup-0.2.95-x64.exe",
-    "sha256":  "8f9b73f60200789d0cf5c16c98972fc57eec51ae8a117822398bcc1090ea1c5a",
+    "latestVersion":  "0.2.96",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.96/FlashSetup-0.2.96-x64.exe",
+    "sha256":  "908db5859ef95f6586a0059d43c438357fb6a7996bb1f05016a63aedaa47b621",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes the missing Flash header icon in the public build while keeping the portable installer fallback bundled once."
+    "changelog":  "Fixes Flash opening the older portable installer UI by bundling the current Desktop installer copy and removing the old Electron fallback."
 }
