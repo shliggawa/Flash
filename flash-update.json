@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.94",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.94/FlashSetup-0.2.94-x64.exe",
-    "sha256":  "9ea4c27b92d2989fcf945e82ced06f3718d2900ae06078f481393c080f26e4de",
+    "latestVersion":  "0.2.95",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.95/FlashSetup-0.2.95-x64.exe",
+    "sha256":  "8f9b73f60200789d0cf5c16c98972fc57eec51ae8a117822398bcc1090ea1c5a",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Adds an ekFlow compact-mode memory guard, fixes Start with Resolve for local/dev launch paths, and reduces compact-mode background redraw work."
+    "changelog":  "Fixes the missing Flash header icon in the public build while keeping the portable installer fallback bundled once."
 }
