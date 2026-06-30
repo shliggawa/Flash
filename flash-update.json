@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.96",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.96/FlashSetup-0.2.96-x64.exe",
-    "sha256":  "908db5859ef95f6586a0059d43c438357fb6a7996bb1f05016a63aedaa47b621",
+    "latestVersion":  "0.2.97",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.97/FlashSetup-0.2.97-x64.exe",
+    "sha256":  "fb4a59296e80357e3771f15e39fb64c2d2efa4aebf8dbfbcc9f9ebb2c87f0ec4",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes Flash opening the older portable installer UI by bundling the current Desktop installer copy and removing the old Electron fallback."
+    "changelog":  "Fixes ekFlow Free so the Modifiers tab opens correctly while keeping Bounce as the available free modifier."
 }
