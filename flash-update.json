@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.97",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.97/FlashSetup-0.2.97-x64.exe",
-    "sha256":  "fb4a59296e80357e3771f15e39fb64c2d2efa4aebf8dbfbcc9f9ebb2c87f0ec4",
+    "latestVersion":  "0.2.101",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.101/FlashSetup-0.2.101-x64.exe",
+    "sha256":  "dbc6777d855514f118d3770ffbec32836daba48cdfbe96d1b49ea5d8f08db370",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes ekFlow Free so the Modifiers tab opens correctly while keeping Bounce as the available free modifier."
+    "changelog":  "Adds ekFlow 2 Free, speeds up its single-target Apply To workflow, and restores separate saved window sizes for ekFlow 2 and ekFlow 2 Free."
 }
