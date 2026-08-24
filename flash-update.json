@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.101",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.101/FlashSetup-0.2.101-x64.exe",
-    "sha256":  "dbc6777d855514f118d3770ffbec32836daba48cdfbe96d1b49ea5d8f08db370",
+    "latestVersion":  "0.2.102",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.102/FlashSetup-0.2.102-x64.exe",
+    "sha256":  "de4ab26610ced23f2f39ff424ea83f78c5c905b8b7f5c623bf7ba8e1c6280183",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Adds ekFlow 2 Free, speeds up its single-target Apply To workflow, and restores separate saved window sizes for ekFlow 2 and ekFlow 2 Free."
+    "changelog":  "Security patch: restores account linking with verifier-protected POST requests and keeps the account-link credential out of request URLs."
 }
