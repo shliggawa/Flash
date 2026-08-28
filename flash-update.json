@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.102",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.102/FlashSetup-0.2.102-x64.exe",
-    "sha256":  "de4ab26610ced23f2f39ff424ea83f78c5c905b8b7f5c623bf7ba8e1c6280183",
+    "latestVersion":  "0.2.103",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.103/FlashSetup-0.2.103-x64.exe",
+    "sha256":  "900eb0fbb250295142b40e8f38097f51f6ae50a45d41bd1c58de2e3ff7b430ae",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Security patch: restores account linking with verifier-protected POST requests and keeps the account-link credential out of request URLs."
+    "changelog":  "Improves Library ownership and Fuse installation, enables in-app credit purchasing, updates Health diagnostics, and replaces the legacy Electron bootstrapper with the redesigned native portable installer."
 }
