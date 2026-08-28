@@ -11,5 +11,5 @@ The old Electron portable installer is deprecated. New and existing users should
 
 SHA-256:
 
-- `FlashSetup-0.2.103-x64.exe`: `900eb0fbb250295142b40e8f38097f51f6ae50a45d41bd1c58de2e3ff7b430ae`
+- `FlashSetup-0.2.103-x64.exe`: `2a40e6384209275b1cf98c5ab2d825e5418164f8183b3cd123d149ef953b28f4`
 - `FlashPortableInstaller.exe`: `6852de9fae9b28a0d3e7c313a4391b948bb18707cf1fa8cd0c57c0bb4ed5eb34`

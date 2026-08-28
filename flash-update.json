@@ -2,7 +2,7 @@
     "schemaVersion":  1,
     "latestVersion":  "0.2.103",
     "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.103/FlashSetup-0.2.103-x64.exe",
-    "sha256":  "900eb0fbb250295142b40e8f38097f51f6ae50a45d41bd1c58de2e3ff7b430ae",
+    "sha256":  "2a40e6384209275b1cf98c5ab2d825e5418164f8183b3cd123d149ef953b28f4",
     "minimumWindowsVersion":  "10",
     "changelog":  "Improves Library ownership and Fuse installation, enables in-app credit purchasing, updates Health diagnostics, and replaces the legacy Electron bootstrapper with the redesigned native portable installer."
 }
