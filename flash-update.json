@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
-    "latestVersion":  "0.2.104",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.104/FlashSetup-0.2.104-x64.exe",
-    "sha256":  "2a7f85765c3454e04c73a60bab3e54fcc3d8193f9235f5db9b89020e5da39d4e",
+    "latestVersion":  "0.2.105",
+    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.105/FlashSetup-0.2.105-x64.exe",
+    "sha256":  "3db25f2d8689117b5431b9706013de728e94b81fc9ebeea7f47c571a29223fc3",
     "minimumWindowsVersion":  "10",
-    "changelog":  "Keeps ekFlow in its own window, refreshes Library thumbnails, fixes the INSTALL STATE and SORT menus, and includes the latest native portable installer."
+    "changelog":  "Refreshes Library artwork from the live catalog, prevents stale cached thumbnails, keeps ekFlow independent when Flash is minimized, and includes the supported native portable installer."
 }
