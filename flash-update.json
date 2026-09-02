@@ -1,8 +1,8 @@
 {
-    "schemaVersion":  1,
-    "latestVersion":  "0.2.106",
-    "downloadUrl":  "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.106/FlashSetup-0.2.106-x64.exe",
-    "sha256":  "d49ec95d17f57c6c078d975ba103b954cc13c241efb33508397b97f528ba872d",
-    "minimumWindowsVersion":  "10",
-    "changelog":  "Fixes the 0.2.105 startup packaging issue, refreshes Library artwork, and shows accurate credit prices for paid Explore More items."
+  "schemaVersion": 1,
+  "latestVersion": "0.2.107",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.107/FlashSetup-0.2.107-x64.exe",
+  "sha256": "109563bbedf2ead49f80c52b581b0a2e0d19342e4a4101495191472748dfa3f2",
+  "minimumWindowsVersion": "10",
+  "changelog": "Publishes the latest Flash desktop build and supported native portable installer."
 }
