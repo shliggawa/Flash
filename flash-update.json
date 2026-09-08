@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.107",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.107/FlashSetup-0.2.107-x64.exe",
-  "sha256": "109563bbedf2ead49f80c52b581b0a2e0d19342e4a4101495191472748dfa3f2",
+  "latestVersion": "0.2.108",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.108/FlashSetup-0.2.108-x64.exe",
+  "sha256": "078d42e6075fd59ef9d6540fcaa98bdb977824b351536cde150713545df7045d",
   "minimumWindowsVersion": "10",
-  "changelog": "Publishes the latest Flash desktop build and supported native portable installer."
+  "changelog": "Publishes Flash 0.2.108 with updated library catalog caching, artwork rendering, and the new 0/71 clean portable installer."
 }
