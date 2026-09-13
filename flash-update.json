@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.108",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.108/FlashSetup-0.2.108-x64.exe",
-  "sha256": "078d42e6075fd59ef9d6540fcaa98bdb977824b351536cde150713545df7045d",
+  "latestVersion": "0.2.109",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.109/FlashSetup-0.2.109-x64.exe",
+  "sha256": "33e5111ab5cd203abb14ea8e3a7d72714e6fe0762ee12d3a6dd9618ec82e9fd1",
   "minimumWindowsVersion": "10",
-  "changelog": "Publishes Flash 0.2.108 with updated library catalog caching, artwork rendering, and the new 0/71 clean portable installer."
+  "changelog": "Fixes OpenCL / AMD GPU compatibility across all Fuses, resolves sampler registration crashes, updates library synchronization, and locks dark mode on storefront and account pages."
 }
