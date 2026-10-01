@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "latestVersion": "0.2.109",
-  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.109/FlashSetup-0.2.109-x64.exe",
-  "sha256": "33e5111ab5cd203abb14ea8e3a7d72714e6fe0762ee12d3a6dd9618ec82e9fd1",
+  "latestVersion": "0.2.110",
+  "downloadUrl": "https://github.com/shliggawa/Flash/releases/download/flash-v0.2.110/FlashSetup-0.2.110-x64.exe",
+  "sha256": "be99a06fc3119513bb618894a13fb7a53cf4ac6ff094c69a8344cbb5354d4e01",
   "minimumWindowsVersion": "10",
-  "changelog": "Fixes OpenCL / AMD GPU compatibility across all Fuses, resolves sampler registration crashes, updates library synchronization, and locks dark mode on storefront and account pages."
+  "changelog": "Adds direct-download web bundle handling, improved library sync, sign-out account isolation fixes, and updated Flash Air installer support."
 }
